@@ -16,3 +16,23 @@
     padding-top: 20vh;
     padding-bottom: 20vh;
 }
+
+.aperture-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.aperture-product {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.aperture-body {
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.separator {
+    border-top: 1px solid #8c8b8b;
+	text-align: center;
+}
