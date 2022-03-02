@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Aperture Laboratories</title>
+  </head>
+  <body>
+
+    <div class="espacio"></div>
+    <div class="logo-div sticky-top">
+        <ion-icon class="logo-icon" name="aperture" style="vertical-align:bottom; font-size: 104px;"></ion-icon>
+        <h1 class="logo-title d-inline" style="vertical-align:20px;">Aperture</h1>
+    </div>
+    <div class="espacio"></div>
+    <div>
+        <ion-icon  name="beer" style="vertical-align:bottom; font-size: 104px;"></ion-icon>
+        <h1 class="d-inline" style="vertical-align:20px;">ESTA DURA MAMASITA POQUE TU TE VES BIEN</h1>
+        <h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br><h1>DURA</h1><br>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Ion-Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- JavaScript <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>-->
+    <script type="text/javascript">
+        const min = 0;
+        const max = 100;
+        const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+
+        /*var offScreenCheck = false;
+        jQuery.expr.filters.offscreen = function(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                (rect.x + rect.width) < 0 
+                || (rect.y + rect.height) < 0
+                || (rect.x > window.innerWidth || rect.y > window.innerHeight)
+            );
+        };
+
+        $(document).on( 'scroll', function(){
+            if ($('.logo-div').is(':offscreen') && !offScreenCheck){
+            alert("oli");
+            offScreenCheck = true;
+        } else if(!$('.logo-div').is(':offscreen')) {
+            offScreenCheck = false;
+        }
+        });*/
+
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                let height = window.innerHeight; //931 el mio
+                let pain = [height / 65.1, height / 2.5, height / 13.69];
+                $('.logo-icon').css("font-size", clamp(104 - $(window).scrollTop() / pain[0], 52, 104) + "px");
+                $('.logo-title').css("font-size", clamp(4 - $(window).scrollTop() / pain[1], 2, 4) + "rem");
+                $('.logo-title').css("vertical-align", clamp(20 - $(window).scrollTop() / pain[2], 9, 20) + "px");
+            })
+        })
+
+    </script>
+
+  </body>
+</html>
